@@ -1,10 +1,15 @@
 const casual = require('casual')
 
+
 casual.define('user', () => ({
-  id: casual.uuid,
+  user_id: casual.uuid,
   email: casual.email,
+  name: casual.name,
+  bio: casual.sentences(),
+  password: casual.password,
   created_at: casual.moment,
   updated_at: casual.moment,
+  profile_pic: 'asdf',
 }))
 
 

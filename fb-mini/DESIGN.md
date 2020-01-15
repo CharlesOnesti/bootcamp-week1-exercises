@@ -1,0 +1,24 @@
+POSTGRESQL database:
+Tables:
+   - users
+      - user_id: primary key
+      - name: string
+      - birthday: date
+      - password: string
+      - bio: string
+      - profile_pic: string
+   - posts
+      - post_id: primary key
+      - user_id: foreign key
+      - content: string
+      - date: date
+   - likes
+      - user_id: foreign key
+      - post_id: foreign key
+      - emotion: enum
+      - date: date
+   - friends
+      - requestor_id: foreign key
+      - requested_id: foreign key
+      - date_requested: date
+      - accepted: enum
